@@ -2,13 +2,27 @@ package com.rk.currencyexchange.model;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity
 public class ExchangeValue {
 	
+	@Id
 	private Long id;
+	
+	@Column(name="currency_from")
 	private String from;
+	
+	@Column(name="currency_to")
 	private String to;
+	
+	@Column(name="conversion_multiple")
 	private BigDecimal conversionMuttiple;
 	
+	private int port;	
 	
 	
 	protected ExchangeValue() {
@@ -45,6 +59,13 @@ public class ExchangeValue {
 	public void setConversionMuttiple(BigDecimal conversionMuttiple) {
 		this.conversionMuttiple = conversionMuttiple;
 	}
+	public int getPort() {
+		return port;
+	}
+	public void setPort(int port) {
+		this.port = port;
+	}
+	
 	
 	
 	
