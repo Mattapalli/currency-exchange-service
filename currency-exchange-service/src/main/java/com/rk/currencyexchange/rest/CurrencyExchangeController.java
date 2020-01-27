@@ -15,8 +15,7 @@ public class CurrencyExchangeController {
 	Environment env;
 	@Autowired
     ExchangeValueRepository repository; 
-    
-	@GetMapping("/currency-exchange/from/{from}/to/{to}")
+  	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public ExchangeValue retrivewExchangeValue(@PathVariable String from,@PathVariable String to) {
 		
 		
