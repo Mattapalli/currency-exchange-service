@@ -20,8 +20,6 @@ public class CurrencyExchangeController {
     ExchangeValueRepository repository; 
   	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public ExchangeValue retrivewExchangeValue(@PathVariable String from,@PathVariable String to) {
-		
-		
 		ExchangeValue exchange= repository.findByFromAndTo(from, to);
 		logger.info("{}",exchange);
 		System.out.println("Exchange:="+exchange);
